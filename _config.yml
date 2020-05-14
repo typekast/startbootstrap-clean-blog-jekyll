@@ -15,6 +15,9 @@ linkedin_username:
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
+# Meta tags configuration
+meta_image: "/img/bg-index.jpg"
+
 # Build settings
 markdown:           kramdown
 paginate:           5
