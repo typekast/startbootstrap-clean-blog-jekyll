@@ -17,6 +17,9 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Meta tags configuration
 meta_image: "/img/bg-index.jpg"
+meta_image_width: 200
+meta_image_height: 200
+meta_locale: "en_US"
 
 # Build settings
 markdown:           kramdown
