@@ -21,10 +21,31 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
+              <p class="meta">Postado por
+                {% if page.author %}
+                  {{ page.author }}
+                {% else %}
+                  {{ site.author }}
+                {% endif %}
+
+                em {% assign m = page.date | date: "%-m" %}
+                {{ page.date | date: "%-d" }}
+                {% case m %}
+                {% when '1' %}Janeiro
+                {% when '2' %}Fevereiro
+                {% when '3' %}Março
+                {% when '4' %}Abril
+                {% when '5' %}Maio
+                {% when '6' %}Junho
+                {% when '7' %}Julho
+                {% when '8' %}Agosto
+                {% when '9' %}Setembro
+                {% when '10' %}Outubro
+                {% when '11' %}Novembro
+                {% when '12' %}Dezembro
+                {% endcase %}
+                {{ page.date | date: "%Y" }} &middot; {% include read_time.html content=page.content %}
+              </p>
             </span>
           </div>
         </div>
@@ -43,12 +64,12 @@ layout: default
         <div class="clearfix">
 
           {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
+          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Posts<span class="d-none d-md-inline">
+              Anteriores</span></a>
           {% endif %}
           {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
+          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Próximos<span class="d-none d-md-inline">
+              Posts</span> &rarr;</a>
           {% endif %}
 
         </div>
