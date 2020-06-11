@@ -5,6 +5,7 @@ description:        An open source blog theme developed by Start Bootstrap
 author:             Start Bootstrap
 baseurl:            "/startbootstrap-clean-blog-jekyll"
 url:                "https://blackrockdigital.github.io"
+podcast_url:        
 
 # Social Profiles
 twitter_username:   SBootstrap

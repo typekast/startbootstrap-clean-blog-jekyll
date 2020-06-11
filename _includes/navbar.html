@@ -20,6 +20,11 @@
         <li class="nav-item">
           <a class="nav-link" href="{{"/contact" | relative_url }}">Contato</a>
         </li>
+        {% if site.podcast_url %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ site.podcast_url }}">Podcast</a>
+        </li>
+        {% endif %}
       </ul>
     </div>
   </div>
